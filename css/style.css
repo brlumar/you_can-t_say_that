@@ -6,8 +6,9 @@ body {
     /* font-family: serif, sans-serif; */
     text-align: center;
     background-color: #7aa095;
-    background-image: url(../Images/fox-7423990_1280.jpg); 
+    background-image: url(../Images/triangle-2136288_1920.jpg); 
     background-repeat: no-repeat;
+
     background-size: cover;   
     text-emphasis-color: white;
     background-position:center; 
@@ -17,6 +18,7 @@ body {
 .whole{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 .modal-header{
     /* display: flex; */
@@ -26,7 +28,9 @@ body {
 
 .title{
     color: antiquewhite;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 100px;
+    
 }
 .score-container{
 display: flex;
@@ -35,6 +39,7 @@ justify-content: space-around;
 
 .team {
     margin-right: 20px; /* You can adjust this value to increase or decrease the space between teams */
+    color: black;
 }
 
 .time-container{
@@ -43,13 +48,16 @@ justify-content: space-around;
 }
 
 .card-section {
-    display: flex; 
+    /* display: flex;  */
     align-items: center;
     justify-content: center;
     justify-items: center;
 
     background-color: black;
     width: 500px; 
+    /*padding: 10px 20px; */
+    margin: 100px, 200px;
+    border-radius: 15px;
 }
 
 
@@ -61,6 +69,7 @@ justify-content: space-around;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    border-radius: 5px;
 
 
 }
@@ -88,6 +97,8 @@ justify-content: space-around;
 }
 
 .play-area{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -102,14 +113,11 @@ justify-content: space-around;
     display: flex;
     width: 100px;
 }
-/* 
-.checkmark {
-    display: flex;
-    width: 100px;
-} */
+
 
 #card-modal{
-    display: none;
+    display: flex; 
+    justify-content: center;
 }
 
 

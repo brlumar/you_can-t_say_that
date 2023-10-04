@@ -26,12 +26,19 @@ function addToScore() {
     updateCard();
 }
 
+function pass() {
+    clearCard();
+    updateCard();
+}
+
 function writeScore() {
     scoreOneDisplay.innerText = teamScoreOne;
 
 }
 
 correctBTN.addEventListener('click', addToScore);
+
+incorrectBTN.addEventListener('click', pass);
 
 
 
@@ -65,13 +72,7 @@ function updateCard() { //Function that updates the card information
     buzzWord4El.innerText = word.tabooWords[3].buzzword;
     currentCardIndex++;
 
-    // question.answers.forEach(answer => {
-    //     const button = document.createElement('button'); //creates a button
-    //     button.innerText = buzzword.text; //changes the inner text of the button
-    //     button.classList.add('btn');
-    //     // button.addEventListener('click', () => selectAnswer(answer.correct));
-    //     // answerButtons.appendChild(button);
-    // });
+   
 }
 
 
