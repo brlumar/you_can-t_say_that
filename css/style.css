@@ -6,85 +6,95 @@ body {
     /* font-family: serif, sans-serif; */
     text-align: center;
     background-color: #7aa095;
-    background-image: url(../Images/triangle-2136288_1920.jpg); 
+    background-image: url(../Images/triangle-2136288_1920.jpg);
     background-repeat: no-repeat;
 
-    background-size: cover;   
+    background-size: cover;
     text-emphasis-color: white;
-    background-position:center; 
+    background-position: center;
 
 }
 
-.whole{
+.whole {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-.modal-header{
+
+.modal-header {
     /* display: flex; */
     justify-content: center;
     color: azure;
 }
 
-.title{
+.title {
     color: antiquewhite;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 70px;
-    
+    text-shadow: #111111;
+
 }
-.score-container{
-display: flex;
-justify-content: space-around;
+
+.score-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 .team {
-    margin-right: 20px; /* You can adjust this value to increase or decrease the space between teams */
+    margin-right: 20px;
+    /* You can adjust this value to increase or decrease the space between teams */
     color: black;
 }
 
-.time-container{
+.time-container {
     display: flex;
     justify-content: center;
 }
 
 .card-section {
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
     justify-items: center;
 
     background-color: rgb(144, 146, 149);
-    width: 470px; 
-   padding 20px;
-    margin: 100px, auto;  /* Center the card horizontally and provide vertical margin */
+    width: 175px;
+   
+    margin: 100px, auto;
+    /* Center the card horizontally and provide vertical margin */
     border-radius: 15px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
-    color: rgb(25, 24, 24); /* Set text color to white for better contrast with black background */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+    /* Add a subtle box shadow for depth */
+    color: rgb(25, 24, 24);
+    /* Set text color to white for better contrast with black background */
 }
 
 /* Add hover effect for interactivity */
 .card-section:hover {
-    transform: scale(1.05); /* Scale up the card on hover for a subtle zoom effect */
-    transition: transform 0.3s ease; /* Smooth transition for the scale effect */
+    transform: scale(1.05);
+    /* Scale up the card on hover for a subtle zoom effect */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the scale effect */
 }
 
 .card {
     background-color: aliceblue;
     margin: 40px;
     max-width: 200px;
-    min-width: 100px;
+    min-width: 130px;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+    /* Add a subtle box shadow for depth */
 
 
 }
 
 /* CSS for styling the button with class "gobtn" and id "team-two-button" */
-.gobtn{
-  margin: 10px;
+.gobtn {
+    margin: 10px;
     /* Add your desired background color */
     background-color: #d9e529;
     /* Add your desired text color */
@@ -95,9 +105,10 @@ justify-content: space-around;
     /* Add rounded corners to the button */
     border-radius: 5px;
     /* Add hover effect */
-    cursor:-moz-zoom-in;
+    cursor: -moz-zoom-in;
     transition: background-color 0.3s ease;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+    /* Add a subtle box shadow for depth */
 }
 
 /* Change the button background color on hover */
@@ -106,7 +117,7 @@ justify-content: space-around;
     color: antiquewhite;
 }
 
-.play-area{
+.play-area {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,20 +126,17 @@ justify-content: space-around;
 }
 
 .guess-this {
-    background-color: rgb(240, 121, 61);
+    background-color: #d9e529;
     /* display: flex; */
 }
 
 .marks {
     display: flex;
-    width: 100px;
+    width: 90px;
 }
 
 
-#card-modal{
-    display: flex; 
+#card-modal {
+    display: flex;
     justify-content: center;
 }
-
-
-
