@@ -1,0 +1,116 @@
+body {
+    margin-top: 12%;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    /* font-family: serif, sans-serif; */
+    text-align: center;
+    background-color: #7aa095;
+    background-image: url(../Images/fox-7423990_1280.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;   
+    text-emphasis-color: white;
+    background-position:center; 
+
+}
+
+.whole{
+    display: flex;
+    justify-content: center;
+}
+.modal-header{
+    /* display: flex; */
+    justify-content: center;
+    color: azure;
+}
+
+.title{
+    color: antiquewhite;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.score-container{
+display: flex;
+justify-content: space-around;
+}
+
+.team {
+    margin-right: 20px; /* You can adjust this value to increase or decrease the space between teams */
+}
+
+.time-container{
+    display: flex;
+    justify-content: center;
+}
+
+.card-section {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    background-color: black;
+    width: 500px; 
+}
+
+
+.card {
+    background-color: aliceblue;
+    margin: 40px;
+    max-width: 200px;
+    min-width: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+
+
+}
+
+/* CSS for styling the button with class "gobtn" and id "team-two-button" */
+.gobtn{
+    /* Add your desired background color */
+    background-color: #e0ea4f;
+    /* Add your desired text color */
+    color: rgb(102, 98, 98);
+    /* Add padding and border to the button */
+    padding: 10px 20px;
+    border: none;
+    /* Add rounded corners to the button */
+    border-radius: 5px;
+    /* Add hover effect */
+    cursor:-moz-zoom-in
+    transition: background-color 0.3s ease;
+}
+
+/* Change the button background color on hover */
+.gobtn:hover {
+    background-color: #848688;
+    color: antiquewhite;
+}
+
+.play-area{
+    justify-content: center;
+    align-items: center;
+
+}
+
+.guess-this {
+    background-color: rgb(240, 121, 61);
+    /* display: flex; */
+}
+
+.marks {
+    display: flex;
+    width: 100px;
+}
+/* 
+.checkmark {
+    display: flex;
+    width: 100px;
+} */
+
+#card-modal{
+    display: none;
+}
+
+
+
