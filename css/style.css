@@ -29,7 +29,7 @@ body {
 .title{
     color: antiquewhite;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 100px;
+    font-size: 70px;
     
 }
 .score-container{
@@ -48,16 +48,18 @@ justify-content: space-around;
 }
 
 .card-section {
-    /* display: flex;  */
+    display: flex; 
     align-items: center;
     justify-content: center;
     justify-items: center;
 
-    background-color: black;
-    width: 500px; 
-    /*padding: 10px 20px; */
-    margin: 100px, 200px;
+    background-color: rgb(144, 146, 149);
+    width: 470px; 
+   padding 20px;
+    margin: 100px, auto;  /* Center the card horizontally and provide vertical margin */
     border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
+    color: rgb(25, 24, 24); /* Set text color to white for better contrast with black background */
 }
 
 
@@ -70,24 +72,27 @@ justify-content: space-around;
     justify-content: space-between;
     padding: 15px;
     border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
 
 
 }
 
 /* CSS for styling the button with class "gobtn" and id "team-two-button" */
 .gobtn{
+  margin: 10px;
     /* Add your desired background color */
-    background-color: #e0ea4f;
+    background-color: #d9e529;
     /* Add your desired text color */
     color: rgb(102, 98, 98);
     /* Add padding and border to the button */
-    padding: 10px 20px;
+    padding: 10px 10px;
     border: none;
     /* Add rounded corners to the button */
     border-radius: 5px;
     /* Add hover effect */
     cursor:-moz-zoom-in
     transition: background-color 0.3s ease;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
 }
 
 /* Change the button background color on hover */
