@@ -62,6 +62,11 @@ justify-content: space-around;
     color: rgb(25, 24, 24); /* Set text color to white for better contrast with black background */
 }
 
+/* Add hover effect for interactivity */
+.card-section:hover {
+    transform: scale(1.05); /* Scale up the card on hover for a subtle zoom effect */
+    transition: transform 0.3s ease; /* Smooth transition for the scale effect */
+}
 
 .card {
     background-color: aliceblue;
@@ -90,7 +95,7 @@ justify-content: space-around;
     /* Add rounded corners to the button */
     border-radius: 5px;
     /* Add hover effect */
-    cursor:-moz-zoom-in
+    cursor:-moz-zoom-in;
     transition: background-color 0.3s ease;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7); /* Add a subtle box shadow for depth */
 }
