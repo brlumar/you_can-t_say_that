@@ -7,9 +7,9 @@ body {
     text-align: center;
     background-color: #7aa095;
     background-image: url(../Images/triangle-2136288_1920.jpg);
-    background-repeat: no-repeat;
+    background-repeat:repeat-y; 
 
-    background-size: cover;
+    background-size: 100%;
     text-emphasis-color: white;
     background-position: center;
 
