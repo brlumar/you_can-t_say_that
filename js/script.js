@@ -26,7 +26,11 @@ let cardModal = document.getElementById('card-modal');
 
 
 function startTurn(){
-if (whoseTurn = 1
+if (whoseTurn = 1){
+    clearCard();
+    updateCard();
+    startTimer();
+}
 
 }
 
@@ -41,26 +45,19 @@ function updateTimer() {
     }
 }
 
-
-
-
-
-
-function addToScore(whichTeam) {
-    if (whichTeam=1){
-    teamScoreOne++;
-    writeScore();
-    console.log('score one is: ', teamScoreOne);
-    clearCard();
-    updateCard();
-}else{ teamScoreOne++;
-    writeScore();
-    console.log('score one is: ', teamScoreOne);
-    clearCard();
-    updateCard();
+function startTimer(){
 
 }
 
+
+
+
+
+function addToScore() {
+    writeScore();
+    console.log('score one is: ', teamScoreOne, 'score two is: ',  teamScoreTwo);
+    clearCard();
+    updateCard();
 }
 
 function pass() {
@@ -68,9 +65,14 @@ function pass() {
     updateCard();
 }
 
-function writeScore() {
+function writeScore(whichTeam) {
+    if(whichTeam = 1){
+        teamScoreOne++;
     scoreOneDisplay.innerText = teamScoreOne;
-
+    }else{
+        teamScoreTwo++;
+        scoreTwoDisplay.innerText = teamScoreTwo;
+    }
 }
 
 correctBTN.addEventListener('click', addToScore);
