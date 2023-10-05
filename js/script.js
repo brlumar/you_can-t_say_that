@@ -5,9 +5,11 @@ const buzzWord1El = document.querySelector('.buzzword1');
 const buzzWord2El = document.querySelector('.buzzword2');
 const buzzWord3El = document.querySelector('.buzzword3');
 const buzzWord4El = document.querySelector('.buzzword4');
+const timeElement = document.getElementById('time'); //variable that gives access to the clock in the DOM 
 
+let scoreOneDisplay = document.querySelector('.team-one-score'); //points to team one display in the DOM
+let scoreTwoDisplay = document.querySelector('.team-two-score'); //points to team two display in the DOM
 
-let scoreOneDisplay = document.querySelector('.team-one-score');
 
 
 let currentCardIndex = 0; //index that indicates which card is currently being displayed
@@ -15,15 +17,50 @@ let time = 60; //seconds allowed per turn
 let timerInterval;
 let teamScoreOne = 0;
 let teamScoreTwo = 0;
+let whoseTurn = 0;
 
 let cardModal = document.getElementById('card-modal');
 
-function addToScore() {
+
+
+
+
+function startTurn(){
+if (whoseTurn = 1
+
+}
+
+//fuction that updates the time and subtract and extra second afer wrong answer
+function updateTimer() {
+    timeElement.innerText = time;
+    if (time <= 0) {
+        clearInterval(timerInterval);
+        //endQuiz();
+    } else {
+        time--;
+    }
+}
+
+
+
+
+
+
+function addToScore(whichTeam) {
+    if (whichTeam=1){
     teamScoreOne++;
     writeScore();
     console.log('score one is: ', teamScoreOne);
     clearCard();
     updateCard();
+}else{ teamScoreOne++;
+    writeScore();
+    console.log('score one is: ', teamScoreOne);
+    clearCard();
+    updateCard();
+
+}
+
 }
 
 function pass() {
