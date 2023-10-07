@@ -16,10 +16,10 @@ let scoreTwoDisplay = document.querySelector('.team-two-score'); //points to tea
 
 
 let currentCardIndex = 0; //index that indicates which card is currently being displayed
-let time = 60; //seconds allowed per turn
-let timerInterval;
-let teamScoreOne = 0;
-let teamScoreTwo = 0;
+let time = 0; //seconds allowed per turn
+let timerInterval; //variable for the clock interval
+let teamScoreOne = 0; //holds the score for team one
+let teamScoreTwo = 0; //holds the score for team two
 let whoseTurn = 0;
 
 let cardModal = document.getElementById('card-modal');
@@ -27,34 +27,34 @@ let cardModal = document.getElementById('card-modal');
 
 
 function startTurnOne() {
-
+if(time == 0){
     clearCard();
     updateCard();
     startTimer();
-    time = 60;
-    clearInterval(timerInterval);
+    time = 60; //resets the timer to 60 seconds
+    clearInterval(timerInterval); //temperarily keeps the timer interval from doubling up. disabling the button while time is running with fix the issue permantantly
 
     timerInterval = setInterval(updateTimer, 1000);
 
     whoseTurn = 1;
     console.log("It's team ", whoseTurn, " turn.");
     print();
-
+}
 }
 
 function startTurnTwo() {
-
+    if(time == 0){
     clearCard();
     updateCard();
     startTimer();
-    time = 60;
-    clearInterval(timerInterval);
+    time = 60; //resets the time to 60 seconds 
+    clearInterval(timerInterval); //temperarily keeps the timer interval from doubling up. disabling the button while time is running with fix the issue permantantly
 
     timerInterval = setInterval(updateTimer, 1000);
     whoseTurn = 2;
     console.log("It's team ", whoseTurn, " turn.");
     print();
-
+    }
 }
 
 function print() { //used just to make sure the whoseTurn varible is changing outside of the function. TO BE DELETED
