@@ -26,13 +26,16 @@ let cardModal = document.getElementById('card-modal');
 
 
 
-
-
 function startTurnOne() {
 
     clearCard();
     updateCard();
     startTimer();
+    time = 60;
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(updateTimer, 1000);
+
     whoseTurn = 1;
     console.log("It's team ", whoseTurn, " turn.");
     print();
@@ -44,6 +47,10 @@ function startTurnTwo() {
     clearCard();
     updateCard();
     startTimer();
+    time = 60;
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(updateTimer, 1000);
     whoseTurn = 2;
     console.log("It's team ", whoseTurn, " turn.");
     print();
