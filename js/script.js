@@ -8,6 +8,11 @@ const buzzWord4El = document.querySelector('.buzzword4');
 const timeElement = document.getElementById('time'); //variable that gives access to the clock in the DOM 
 const startOne = document.getElementById('team-one-button'); //points to team one start button
 const startTwo = document.getElementById('team-two-button'); //points to team two start button
+const audioElBuzzer = document.getElementById('buzzer');
+const audioEltimer = document.getElementById('end-turn');
+const audioElCorrect = document.getElementById('correct');
+const audioElTimerEnd = document.getElementById('timer-running');
+const audioElAww = document.getElementById('aww');
 
 
 let scoreOneDisplay = document.querySelector('.team-one-score'); //points to team one display in the DOM
@@ -39,6 +44,8 @@ if(time == 0){
     whoseTurn = 1;
     console.log("It's team ", whoseTurn, " turn.");
     print();
+}else{
+    playTimerRunning();
 }
 }
 
@@ -54,6 +61,8 @@ function startTurnTwo() {
     whoseTurn = 2;
     console.log("It's team ", whoseTurn, " turn.");
     print();
+    }else{
+        playTimerRunning();
     }
 }
 
@@ -66,7 +75,9 @@ function updateTimer() {
     timeElement.innerText = time;
     if (time <= 0) {
         clearInterval(timerInterval);
-        //endQuiz();
+        playBuzzer();
+        playEndTurn();
+    
     } else {
         time--;
     }
@@ -81,15 +92,18 @@ function startTimer() {
 
 
 function addToScore() {
+    if(time>=0){
     writeScore();
     console.log('score one is: ', teamScoreOne, 'score two is: ', teamScoreTwo);
     clearCard();
     updateCard();
+    }
 }
 
 function pass() {
     clearCard();
     updateCard();
+    playAww();
 }
 
 function writeScore() {
@@ -97,10 +111,12 @@ function writeScore() {
         teamScoreOne++;
         scoreOneDisplay.innerText = teamScoreOne;
         console.log("It's team ", whoseTurn, " turn in writeScore func.");
+        playCorrect();
     } else {
         teamScoreTwo++;
         scoreTwoDisplay.innerText = teamScoreTwo;
         console.log("It's team ", whoseTurn, " turn in writeScore func.");
+        playCorrect();
     }
 }
 
@@ -139,6 +155,24 @@ function updateCard() { //Function that updates the card information
     currentCardIndex++;
 
 
+}
+
+function playBuzzer(){
+    audioElBuzzer.play();
+}
+
+function playEndTurn (){
+    audioEltimer.play();
+}
+function playCorrect(){
+    audioElCorrect.play();
+}
+
+function playTimerRunning(){
+    audioElTimerEnd.play();
+}
+function playAww(){
+    audioElAww.play();
 }
 
 startOne.addEventListener('click', startTurnOne); //starts team one when Go button is pressed
